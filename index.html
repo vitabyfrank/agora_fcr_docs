@@ -41,22 +41,26 @@
       }
 
       .container {
-        max-width: 1200px;
+        display: flex;
+        max-width: 1400px;
         margin: 0 auto;
         padding: 2rem;
+        gap: 2rem;
+        position: relative;
       }
 
       .sidebar {
-        position: fixed;
-        left: 0;
-        top: 180px;
+        position: sticky;
+        top: 2rem;
         width: 280px;
-        height: calc(100vh - 180px);
+        height: fit-content;
+        max-height: calc(100vh - 4rem);
         background: white;
         padding: 2rem 1rem;
         overflow-y: auto;
         box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
-        z-index: 100;
+        border-radius: 12px;
+        flex-shrink: 0;
       }
 
       .sidebar h3 {
@@ -90,7 +94,7 @@
       }
 
       .main-content {
-        margin-left: 300px;
+        flex: 1;
         background: white;
         padding: 2rem;
         border-radius: 12px;
@@ -295,13 +299,13 @@
         color: #667eea;
       }
 
-      @media (max-width: 968px) {
-        .sidebar {
-          display: none;
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
         }
 
-        .main-content {
-          margin-left: 0;
+        .sidebar {
+          display: none;
         }
 
         .header h1 {
@@ -384,7 +388,7 @@
   </head>
   <body>
     <div class="header">
-      <h1>🎓 Flexible Classroom</h1>
+      <h1> Flexible Classroom</h1>
       <p>
         Agora의 온라인 인터랙티브 교실 솔루션 - 로우코드 접근 방식으로 빠르게
         구축하는 온라인 교육 플랫폼
@@ -403,7 +407,7 @@
           <li><a href="#best-practices">모범 사례</a></li>
           <li><a href="#api">클라이언트 API</a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li><a href="#resources">추가 리소스</a></li>
+          
         </ul>
       </nav>
 
@@ -997,73 +1001,6 @@
           </div>
         </section>
 
-        <section id="resources" class="section">
-          <h2>📖 추가 리소스</h2>
-
-          <div style="margin: 2rem 0">
-            <a href="https://doc.shengwang.cn" class="btn" target="_blank"
-              >📚 공식 문서</a
-            >
-            <a
-              href="https://github.com/AgoraIO-Community/flexible-classroom-desktop"
-              class="btn"
-              target="_blank"
-              >💻 GitHub 저장소</a
-            >
-            <a
-              href="https://doc.shengwang.cn/api-ref"
-              class="btn"
-              target="_blank"
-              >🔧 API 참조</a
-            >
-            <a
-              href="https://www.shengwang.cn/support"
-              class="btn btn-secondary"
-              target="_blank"
-              >🆘 기술 지원</a
-            >
-            <a
-              href="https://github.com/AgoraIO-Community"
-              class="btn btn-secondary"
-              target="_blank"
-              >📦 샘플 코드</a
-            >
-            <a
-              href="https://www.agora.io/en/community/"
-              class="btn btn-secondary"
-              target="_blank"
-              >👥 개발자 커뮤니티</a
-            >
-          </div>
-
-          <div class="card card-info">
-            <h4>🎯 빠른 링크</h4>
-            <ul>
-              <li><strong>릴리스 노트:</strong> 최신 기능 및 업데이트 확인</li>
-              <li><strong>개인정보 보호정책:</strong> 데이터 처리 방침</li>
-              <li><strong>서비스 약관:</strong> 이용 약관</li>
-              <li><strong>보안 및 규정 준수:</strong> 보안 정책</li>
-            </ul>
-          </div>
-
-          <div class="card card-success">
-            <h4>🎓 학습 리소스</h4>
-            <ul>
-              <li><strong>튜토리얼:</strong> 단계별 가이드</li>
-              <li><strong>비디오 강좌:</strong> 동영상으로 배우기</li>
-              <li><strong>웨비나:</strong> 실시간 교육 세션</li>
-              <li><strong>블로그:</strong> 최신 기술 및 팁</li>
-            </ul>
-          </div>
-        </section>
-
-        <div class="cta-section">
-          <h3>🚀 지금 시작하세요!</h3>
-          <p>Flexible Classroom으로 온라인 교육 플랫폼을 빠르게 구축하세요.</p>
-          <a href="https://www.shengwang.cn" class="btn" target="_blank"
-            >무료로 시작하기</a
-          >
-        </div>
       </main>
     </div>
 
